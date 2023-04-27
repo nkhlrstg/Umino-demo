@@ -56,9 +56,7 @@ i {
     font-size: 1.2rem;
     padding-left: 20px;
 }
-i:nth-child(1) {
-    font-size: 1.1rem;
-}
+
 
 i:hover {
     color: rgb(235, 78, 78);
@@ -81,7 +79,6 @@ i:hover {
     position: absolute;
     width: 50%;
     height: 100%;
-    /* border: 1px solid red; */
     top: 0;
     left: 0;
 }
@@ -220,7 +217,7 @@ i:hover {
     display: flex;
     gap: 20px;    
 }
-.trend p
+.trend-product-box-content p
 {    
     font-family: Futura mdbt;
 }
@@ -229,22 +226,26 @@ i:hover {
     font-size: 1.2rem;
 }
 
-.trend > div
+.trend-product-box-main
 {
     flex-grow: 1;
 }
 .trend-image-holder
 {
     margin-bottom: 10px;
-    position: relative;    
+    position: relative;
+    overflow: hidden;
+    border: 1px solid red;  
 }
 .trend-images
 {
-    /* border: 1px solid red; */
+    display: block;
     width: 100%;
+    transition: .5s ease-in-out;
 }
 
-.trend span
+
+.trend-product-box-content > span
 {
     all: unset;
     display: inline-block;
@@ -258,7 +259,148 @@ i:hover {
     border: 3px solid #fff
 }
 
-.trend span:nth-last-child(1)
+.trend-product-box-content > span:nth-last-child(1)
 {
     background-color: #3f8ad1;
+}
+
+.trend-image-holder-inner
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.trend-image-holder-inner-top
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.trend-image-holder-rightside-icons
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.trend-image-holder-leftside-icons
+{
+    display: flex;
+    flex-direction: column;
+}
+.trend-image-holder-rightside-icons div
+{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px #b3b3b3;
+}
+
+
+.trend-image-holder-rightside-icons i
+{
+    padding: 0;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
+.trend-image-holder-leftside-icons span
+{
+    background-color: green;
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: fit-content;
+}
+.product-discount-badge
+{
+    background-color: red !important;
+}
+
+.trend-image-holder-inner a
+{
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 0 10px #00000028;
+
+}
+
+
+.trend-image-holder-inner
+{
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+
+
+.trend-image-holder:hover .trend-image-holder-inner
+{
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+.trend-images:nth-child(2)
+{
+    display: none;
+    animation: zoom-in .2s ease-out;
+}
+.trend-image-holder:hover .trend-images:nth-child(2)
+{
+    display: block;
+}
+.trend-image-holder:hover .trend-images:nth-child(1)
+{
+    display: none;
+}
+
+.callout-holder
+{
+    position: relative;
+}
+.trend-image-callout
+{
+    display: none;
+    width: 100px;
+    height: 25px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-50%)
+
+}
+
+.callout-holder:hover .trend-image-callout
+{
+    display:block
+}
+
+@keyframes zoom-in{
+  0% {
+    transform: scale(2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
