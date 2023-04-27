@@ -1,0 +1,264 @@
+
+@font-face {
+    font-family: Futura ltbt;
+    src: url(./fonts/futura-ltbt.ttf);
+}
+@font-face {
+    font-family: Futura mdbt;
+    src: url(./fonts/futura-mdbt.ttf);
+}
+@font-face {
+    font-family: Futura heavy;
+    src: url(./fonts/futura-heavy.ttf);
+}
+
+@font-face {
+    font-family: Futura condlt;
+    src: url(./fonts/futura-condlt.otf);
+}
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Futura ltbt;
+}
+
+.top-bar-section
+{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.umino-logo-header
+{
+    height: 1.5rem;
+    display: block;
+}
+
+.header-center a
+{
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+    font-family: Futura mdbt;
+    font-size: 1.2rem;
+}
+
+.header-center a:hover {
+    color: rgb(235, 78, 78);
+}
+
+i {
+    font-size: 1.2rem;
+    padding-left: 20px;
+}
+i:nth-child(1) {
+    font-size: 1.1rem;
+}
+
+i:hover {
+    color: rgb(235, 78, 78);
+}
+
+.slider
+{
+    
+    position: relative;
+}
+
+.slider img
+{
+    display: block;
+    width: 100%;
+}
+
+.slider-content
+{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid red; */
+    top: 0;
+    left: 0;
+}
+
+.inner-content
+{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Futura ltbt;    
+}
+
+.inner-content h1
+{
+    font-size: 64px;
+}
+.inner-content h1:nth-child(2)
+{
+    margin-bottom: 20px;
+}
+
+.inner-content p
+{
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.inner-content button
+{
+    all: unset;
+    background: #000;
+    padding: 20px;
+    color: #fff;
+    border-radius: 100px;
+    width: 150px;
+    text-align: center;
+}
+
+.second-container
+{
+    
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.second-container img
+{
+    width: 100%;
+    transition: transform .2s;
+}
+
+.second-container img:hover
+{
+    transform: scale(1.2) translateY(-20px);    
+}
+
+
+.left
+{
+    position: relative;
+    overflow: hidden;
+}
+.center
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.top{
+    position: relative;
+    overflow: hidden;
+}
+.top img {
+    display: block;
+}
+
+.down
+{
+    display: flex;
+    gap: 10px;
+}
+
+.down div
+{
+    position: relative;
+    width: calc(50% - 5px );
+    overflow: hidden;
+}
+
+.right
+{
+    position: relative;
+    overflow: hidden;
+}
+.white-tag
+{
+    position: absolute;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 100px;
+    width: max-content;
+    font-family: Futura mdbt;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px #00000028;
+}
+
+
+.trending-products
+{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.trending-products h1
+{
+    font-family: Futura ltbt;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.trending-products p
+{
+    font-family: Futura mdbt;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.trend
+{
+    padding-left: 25px;
+    padding-right: 25px;
+    display: flex;
+    gap: 20px;    
+}
+.trend p
+{    
+    font-family: Futura mdbt;
+}
+.starred
+{
+    font-size: 1.2rem;
+}
+
+.trend > div
+{
+    flex-grow: 1;
+}
+.trend-image-holder
+{
+    margin-bottom: 10px;
+    position: relative;    
+}
+.trend-images
+{
+    /* border: 1px solid red; */
+    width: 100%;
+}
+
+.trend span
+{
+    all: unset;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #7abdb5;
+    border-radius: 50%;
+    outline: 1px solid #b9b9b9;
+    border: 3px solid #fff
+}
+
+.trend span:nth-last-child(1)
+{
+    background-color: #3f8ad1;
+}
